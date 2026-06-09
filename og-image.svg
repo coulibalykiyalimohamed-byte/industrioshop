@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Fond noir -->
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  
+  <!-- Bande orange gauche -->
+  <rect x="0" y="0" width="8" height="630" fill="#e8611a"/>
+  
+  <!-- Rectangle décoratif -->
+  <rect x="60" y="180" width="500" height="3" fill="#e8611a"/>
+  
+  <!-- Nom principal -->
+  <text x="60" y="280" 
+    font-family="Arial Black, sans-serif" 
+    font-size="96" 
+    font-weight="900"
+    letter-spacing="8"
+    fill="#f0ede8">INDUSTRIO</text>
+  
+  <text x="60" y="380" 
+    font-family="Arial Black, sans-serif" 
+    font-size="96" 
+    font-weight="900"
+    letter-spacing="8"
+    fill="#e8611a">SHOP</text>
+
+  <!-- Slogan -->
+  <text x="62" y="440" 
+    font-family="Arial, sans-serif" 
+    font-size="28" 
+    letter-spacing="6"
+    fill="#8a8d94">MATÉRIAUX INDUSTRIELS — LIVRAISON MONDIALE</text>
+
+  <!-- Ligne décorative bas -->
+  <rect x="60" y="480" width="300" height="2" fill="#e8611a"/>
+
+  <!-- Icônes tubes décoratifs -->
+  <circle cx="950" cy="280" r="120" stroke="#e8611a" stroke-width="3" fill="none" opacity="0.3"/>
+  <circle cx="950" cy="280" r="80" stroke="#e8611a" stroke-width="2" fill="none" opacity="0.2"/>
+  <circle cx="950" cy="280" r="40" stroke="#e8611a" stroke-width="2" fill="#1a1c20" opacity="0.5"/>
+  <circle cx="1100" cy="400" r="80" stroke="#e8611a" stroke-width="2" fill="none" opacity="0.15"/>
+  <circle cx="820" cy="420" r="60" stroke="#8a8d94" stroke-width="1.5" fill="none" opacity="0.2"/>
+</svg>

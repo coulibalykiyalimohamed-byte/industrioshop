@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="INDUSTRIOSHOP — Fournisseur de matériaux industriels : tubes, profilés, tôles, inox, raccords et plus. Qualité professionnelle mondiale.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="matériaux industriels, tubes acier, profilés, tôles, raccords, inox, fournisseur industriel, livraison mondiale">
+<meta name="author" content="INDUSTRIOSHOP">
+<meta property="og:title" content="INDUSTRIOSHOP — Matériaux Industriels">
+<meta property="og:description" content="Fournisseur de matériaux industriels : tubes, profilés, tôles, inox, raccords. Qualité professionnelle, livraison mondiale.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://industrioshop.com/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://industrioshop.com">
+<link rel="canonical" href="https://industrioshop.com">
+<title>INDUSTRIOSHOP — Matériaux Industriels</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<meta name="theme-color" content="#e8611a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --dark: #111214;
+    --dark2: #1a1c20;
+    --dark3: #222428;
+    --steel: #2e3238;
+    --orange: #e8611a;
+    --orange2: #ff7a35;
+    --gold: #c9a84c;
+    --white: #f0ede8;
+    --gray: #8a8d94;
+    --lightgray: #c4c6ca;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+    --font-cond: 'Barlow Condensed', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 400;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--dark); }
+  ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 72px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(232,97,26,0.15);
+    transition: all 0.3s ease;
+  }
+
+  nav.scrolled {
+    height: 60px;
+    background: rgba(10,10,10,0.98);
+    border-bottom-color: rgba(232,97,26,0.3);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .nav-logo-text span { color: var(--orange); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-cond);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: var(--orange);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .lang-toggle {
+    display: flex;
+    gap: 0;
+    background: var(--dark2);
+    border: 1px solid var(--steel);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .lang-btn {
+    font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .lang-btn.active {
+    background: var(--orange);
+    color: var(--white);
+  }
+
+  .nav-cta {
+    font-family: var(--font-cond);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  .nav-cta:hover { background: var(--orange2); transform: translateY(-1px); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--white);
+    transition: all 0.3s;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 48px 0;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 50%, rgba(232,97,26,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%),
+      linear-gradient(180deg, #0a0a0a 0%, #111214 100%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(232,97,26,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,97,26,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    border: 1px solid rgba(232,97,26,0.3);
+    padding: 6px 16px;
+    margin-bottom: 28px;
+    animation: fadeInUp 0.8s ease both;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 10vw, 140px);
+    line-height: 0.88;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s ease 0.1s both;
+  }
+
+  .hero-title .line2 {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(240,237,232,0.3);
+  }
+
+  .hero-title .accent { color: var(--orange); }
+
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--gray);
+    max-width: 520px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+  }
+
+  .hero-sub strong { color: var(--lightgray); font-weight: 500; }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.3s both;
+  }
+
+  .btn-primary {
+    font-family: var(--font-cond);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .btn-primary:hover::before { transform: translateX(100%); }
+  .btn-primary:hover { background: var(--orange2); transform: translateY(-2px); }
+
+  .btn-secondary {
+    font-family: var(--font-cond);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(240,237,232,0.2);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    position: absolute;
+    right: 48px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    animation: fadeInRight 1s ease 0.5s both;
+  }
+
+  .stat-item {
+    text-align: right;
+  }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 42px;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .stat-num span { color: var(--orange); }
+
+  .stat-label {
+    font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 2px;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeIn 1s ease 1s both;
+  }
+
+  .hero-scroll span {
+    font-family: var(--font-cond);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(var(--orange), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; transform: scaleY(1); }
+    50% { opacity: 0.3; transform: scaleY(0.5); }
+  }
+
+  /* ─── SECTION COMMONS ─── */
+  section { padding: 100px 48px; }
+
+  .section-label {
+    font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 32px; height: 2px;
+    background: var(--orange);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 0.95;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ─── PRODUCTS ─── */
+  #produits { background: var(--dark); }
+
+  .products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .product-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-family: var(--font-cond);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    background: transparent;
+    color: var(--gray);
+    border: 1px solid var(--steel);
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 2px;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px;
+  }
+
+  .product-card {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--dark2);
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.95) 100%);
+    z-index: 1;
+    transition: opacity 0.4s;
+  }
+
+  .product-card:hover::before {
+    background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.97) 100%);
+  }
+
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.7) saturate(0.8);
+  }
+
+  .product-card:hover .product-img {
+    transform: scale(1.08);
+    filter: brightness(0.5) saturate(0.6);
+  }
+
+  .product-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px;
+    z-index: 2;
+  }
+
+  .product-cat {
+    font-family: var(--font-cond);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 6px;
+  }
+
+  .product-name {
+    font-family: var(--font-cond);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .product-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+
+  .product-card:hover .product-desc {
+    max-height: 60px;
+    opacity: 1;
+  }
+
+  .product-tag {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-family: var(--font-cond);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--orange);
+    color: var(--white);
+    padding: 4px 10px;
+    z-index: 3;
+  }
+
+  /* ─── ABOUT ─── */
+  #about {
+    background: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+    height: 520px;
+  }
+
+  .about-img-main {
+    position: absolute;
+    top: 0; left: 0;
+    width: 75%;
+    height: 80%;
+    object-fit: cover;
+    filter: brightness(0.7) saturate(0.7);
+  }
+
+  .about-img-accent {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 55%;
+    height: 55%;
+    object-fit: cover;
+    filter: brightness(0.6) saturate(0.7);
+    border: 3px solid var(--black);
+  }
+
+  .about-badge {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; height: 100px;
+    background: var(--orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .about-badge-num {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .about-badge-text {
+    font-family: var(--font-cond);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+  }
+
+  .about-line {
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 80%;
+    background: linear-gradient(var(--orange), transparent);
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .feature-item {
+    padding: 20px;
+    background: var(--dark2);
+    border-left: 3px solid var(--orange);
+    transition: transform 0.2s;
+  }
+
+  .feature-item:hover { transform: translateX(4px); }
+
+  .feature-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .feature-title {
+    font-family: var(--font-cond);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .feature-text {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ─── TICKER ─── */
+  .ticker {
+    background: var(--orange);
+    padding: 14px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ticker-inner {
+    display: inline-flex;
+    animation: ticker 30s linear infinite;
+    gap: 0;
+  }
+
+  .ticker-item {
+    font-family: var(--font-cond);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .ticker-item::before {
+    content: '◆';
+    font-size: 8px;
+    opacity: 0.7;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── WHY ─── */
+  #pourquoi { background: var(--dark); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--steel);
+    margin-top: 56px;
+  }
+
+  .why-card {
+    background: var(--dark);
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .why-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .why-card:hover { background: var(--dark2); }
+  .why-card:hover::before { transform: scaleX(1); }
+
+  .why-num {
+    font-family: var(--font-display);
+    font-size: 72px;
+    color: rgba(232,97,26,0.12);
+    line-height: 1;
+    position: absolute;
+    top: 24px; right: 24px;
+  }
+
+  .why-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .why-title {
+    font-family: var(--font-cond);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .why-text {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info { padding-top: 8px; }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--dark2);
+    border-left: 3px solid var(--orange);
+  }
+
+  .contact-item-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .contact-item-label {
+    font-family: var(--font-cond);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .contact-item-value {
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .contact-form {
+    background: var(--dark2);
+    padding: 48px;
+    border-top: 3px solid var(--orange);
+    position: relative;
+  }
+
+  .contact-form::before {
+    content: 'DEMANDE DE DEVIS';
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--orange);
+    position: absolute;
+    top: 20px; left: 48px;
+  }
+
+  .form-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    margin-bottom: 32px;
+    padding-top: 8px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--dark3);
+    border: 1px solid var(--steel);
+    color: var(--white);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 2px;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--orange);
+  }
+
+  .form-group select option { background: var(--dark3); }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-submit {
+    width: 100%;
+    font-family: var(--font-cond);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 18px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    margin-top: 8px;
+  }
+
+  .form-submit:hover {
+    background: var(--orange2);
+    transform: translateY(-2px);
+  }
+
+  .form-notice {
+    font-size: 11px;
+    color: var(--gray);
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+.form-notice::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a8d94' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--steel);
+    padding: 60px 48px 32px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand .nav-logo-text {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 280px;
+  }
+
+  .footer-col-title {
+    font-family: var(--font-cond);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-links a::before {
+    content: '→';
+    color: var(--orange);
+    font-size: 11px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--white); }
+  .footer-links a:hover::before { opacity: 1; }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    border-top: 1px solid var(--steel);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--gray);
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-legal a {
+    font-size: 12px;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover { color: var(--orange); }
+
+  /* ─── MOBILE MENU ─── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: rgba(10,10,10,0.98);
+    backdrop-filter: blur(16px);
+    z-index: 999;
+    flex-direction: column;
+    padding: 24px 48px 32px;
+    border-bottom: 2px solid var(--orange);
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: var(--font-cond);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--steel);
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:hover { color: var(--orange); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    #about, #contact {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .about-visual { height: 350px; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .hero-stats { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links, .lang-toggle, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 64px 24px; }
+    .hero { padding: 72px 24px 0; }
+    .why-grid { grid-template-columns: 1fr; }
+    .about-features { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form { padding: 32px 24px; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 48px 24px 24px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .products-header { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ─── REVEAL ANIMATION ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── BACK TO TOP ─── */
+  .back-top {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    width: 48px; height: 48px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    z-index: 100;
+  }
+
+  .back-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .back-top:hover {
+    background: var(--orange2);
+    transform: translateY(-4px);
+  }
+
+  /* ─── SECURITY BADGE ─── */
+  .security-bar {
+    background: var(--dark2);
+    border-top: 1px solid var(--steel);
+    border-bottom: 1px solid var(--steel);
+    padding: 10px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .sec-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-cond);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .sec-item span { font-size: 14px; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <!-- Logo SVG inspiré du logo fourni -->
+    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="10" stroke="#e8611a" stroke-width="2" fill="none"/>
+      <circle cx="20" cy="20" r="3" fill="#e8611a"/>
+      <path d="M20 10 L20 4" stroke="#e8611a" stroke-width="2"/>
+      <path d="M20 36 L20 30" stroke="#e8611a" stroke-width="2"/>
+      <path d="M10 20 L4 20" stroke="#e8611a" stroke-width="2"/>
+      <path d="M36 20 L30 20" stroke="#e8611a" stroke-width="2"/>
+      <path d="M13.4 13.4 L9 9" stroke="#e8611a" stroke-width="1.5"/>
+      <path d="M31 31 L26.6 26.6" stroke="#e8611a" stroke-width="1.5"/>
+      <path d="M26.6 13.4 L31 9" stroke="#e8611a" stroke-width="1.5"/>
+      <path d="M9 31 L13.4 26.6" stroke="#e8611a" stroke-width="1.5"/>
+      <!-- Gear teeth -->
+      <path d="M16 6 L16 2 L24 2 L24 6" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+    </svg>
+    <span class="nav-logo-text">INDUSTRIO<span>SHOP</span></span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#produits" data-fr="Produits" data-en="Products">Produits</a></li>
+    <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+    <li><a href="#pourquoi" data-fr="Pourquoi nous" data-en="Why us">Pourquoi nous</a></li>
+    <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="#contact" class="nav-cta" data-fr="Demander un devis" data-en="Get a quote">Demander un devis</a>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#produits" onclick="toggleMenu()">Produits</a>
+  <a href="#about" onclick="toggleMenu()">À propos</a>
+  <a href="#pourquoi" onclick="toggleMenu()">Pourquoi nous</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+<a href="#rachat" onclick="toggleMenu()" data-fr="Vendre mes matériaux" data-en="Sell my materials">Vendre mes matériaux</a><div style="display:flex;gap:0;margin-top:16px;border:1px solid #2e3238;border-radius:4px;overflow:hidden;width:fit-content;">
+    <button class="lang-btn active" onclick="setLang('fr');toggleMenu()">FR</button>
+    <button class="lang-btn" onclick="setLang('en');toggleMenu()">EN</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-fr="Fournisseur de matériaux industriels" data-en="Industrial Materials Supplier">
+      Fournisseur de matériaux industriels
+    </div>
+    <h1 class="hero-title">
+      <div>L'ACIER</div>
+      <div class="line2">AU SERVICE</div>
+      <div>DE <span class="accent">L'INDUSTRIE</span></div>
+    </h1>
+    <p class="hero-sub" data-fr="Tubes, profilés, tôles, inox, raccords et raccorderie industrielle. <strong>Qualité professionnelle</strong>, livraison mondiale, service professionnel." data-en="Pipes, profiles, sheets, stainless steel, fittings and industrial connections. <strong>Professional quality</strong>, worldwide delivery, professional service.">
+      Tubes, profilés, tôles, inox, raccords et raccorderie industrielle. <strong>Qualité professionnelle</strong>, livraison mondiale, service professionnel.
+    </p>
+    <div class="hero-actions">
+      <a href="#produits" class="btn-primary" data-fr="Voir nos produits" data-en="View our products">Voir nos produits</a>
+      <a href="#contact" class="btn-secondary" data-fr="Demander un devis" data-en="Request a quote">Demander un devis</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">50<span>+</span></div>
+      <div class="stat-label" data-fr="Références produits" data-en="Product references">Références produits</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100<span>%</span></div>
+      <div class="stat-label" data-fr="Qualité professionnelle" data-en="Professional quality">Qualité professionnelle</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24<span>H</span></div>
+      <div class="stat-label" data-fr="Réponse garantie" data-en="Guaranteed response">Réponse garantie</div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-fr="Défiler" data-en="Scroll">Défiler</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- SECURITY BAR -->
+<div class="security-bar">
+  <div class="sec-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span data-fr="Paiement sécurisé" data-en="Secure payment">Paiement sécurisé</span></div>
+  <div class="sec-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> <span data-fr="Données confidentielles" data-en="Confidential Data">Données confidentielles</span></div>
+  <div class="sec-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> <span data-fr="Livraison internationale" data-en="International Delivery">Livraison internationale</span></div>
+  <div class="sec-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> <span data-fr="Devis sous 24h" data-en="Quote within 24h">Devis sous 24h</span></div>
+  <div class="sec-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg> <span data-fr="Matériaux sélectionnés avec soin" data-en="Carefully selected materials">Matériaux sélectionnés avec soin</span></div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">Tubes acier sans soudure</span>
+    <span class="ticker-item">Profilés HEA / HEB</span>
+    <span class="ticker-item">Tôles perforées inox</span>
+    <span class="ticker-item">Cornières acier galvanisé</span>
+    <span class="ticker-item">Brides ASTM 304L / 316L</span>
+    <span class="ticker-item">Ronds à béton</span>
+    <span class="ticker-item">Tubes rectangulaires</span>
+    <span class="ticker-item">Raccords industriels</span>
+    <span class="ticker-item">Vannes à bille inox</span>
+    <span class="ticker-item">Grillage métallique</span>
+    <span class="ticker-item">Tubes acier sans soudure</span>
+    <span class="ticker-item">Profilés HEA / HEB</span>
+    <span class="ticker-item">Tôles perforées inox</span>
+    <span class="ticker-item">Cornières acier galvanisé</span>
+    <span class="ticker-item">Brides ASTM 304L / 316L</span>
+    <span class="ticker-item">Ronds à béton</span>
+    <span class="ticker-item">Tubes rectangulaires</span>
+    <span class="ticker-item">Raccords industriels</span>
+    <span class="ticker-item">Vannes à bille inox</span>
+    <span class="ticker-item">Grillage métallique</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="produits">
+  <div class="products-header">
+    <div>
+      <div class="section-label" data-fr="Notre catalogue" data-en="Our catalog">Notre catalogue</div>
+      <h2 class="section-title" data-fr="NOS PRODUITS" data-en="OUR PRODUCTS">NOS PRODUITS</h2>
+      <p class="section-sub" data-fr="Une gamme complète de matériaux métalliques industriels pour tous vos projets de construction, industrie et infrastructure." data-en="A complete range of industrial metal materials for all your construction, industrial and infrastructure projects.">
+        Une gamme complète de matériaux métalliques industriels pour tous vos projets de construction, industrie et infrastructure.
+      </p>
+    </div>
+    <div class="product-filters">
+      <button class="filter-btn active" data-fr="Tous" data-en="All" onclick="filterProducts('all', this)">Tous</button>
+      <button class="filter-btn" data-fr="Tubes" data-en="Pipes" onclick="filterProducts('tubes', this)">Tubes</button>
+      <button class="filter-btn" data-fr="Profilés" data-en="Profiles" onclick="filterProducts('profiles', this)">Profilés</button>
+      <button class="filter-btn" data-fr="Tôles" data-en="Sheets" onclick="filterProducts('toles', this)">Tôles</button>
+      <button class="filter-btn" data-fr="Raccords" data-en="Fittings" onclick="filterProducts('raccords', this)">Raccords</button>
+<button class="filter-btn" data-fr="Vannes" data-en="Valves" onclick="filterProducts('vannes', this)">Vannes</button>
+<button class="filter-btn" data-fr="Grillages" data-en="Mesh" onclick="filterProducts('grillages', this)">Grillages</button>
+    </div>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+
+    <!-- Tubes acier noir -->
+    <div class="product-card" data-category="tubes">
+     <img src="tubes-acier.jpg" class="product-img" alt="Tubes Acier Noir">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Tubes & Tuyaux" data-en="Pipes & Tubes">Tubes & Tuyaux</div>
+        <div class="product-name" data-fr="Tubes Acier Noir" data-en="Black Steel Pipes">Tubes Acier Noir</div>
+        <div class="product-desc" data-fr="Tubes ronds sans soudure et soudés, diamètres de 20mm à 600mm. Qualité professionnelle garantie." data-en="Seamless and welded round pipes, diameters from 20mm to 600mm. Professional quality guaranteed.">Tubes ronds sans soudure et soudés, diamètres de 20mm à 600mm. Qualité professionnelle garantie.</div>
+      </div>
+    </div>
+
+    <!-- Tôles perforées -->
+    <div class="product-card" data-category="toles">
+      <img src="tole-perforee.jpg" class="product-img" alt="Tôles Perforées">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Tôles" data-en="Sheets">Tôles</div>
+        <div class="product-name" data-fr="Tôles Perforées" data-en="Perforated Sheets">Tôles Perforées</div>
+        <div class="product-desc" data-fr="Acier et inox, perforations rondes, carrées ou hexagonales. Épaisseur 1mm à 10mm." data-en="Steel and stainless, round, square or hexagonal perforations. Thickness 1mm to 10mm.">Acier et inox, perforations rondes, carrées ou hexagonales. Épaisseur 1mm à 10mm.</div>
+      </div>
+      <div class="product-tag" data-fr="Disponible" data-en="Available">Disponible</div>
+    </div>
+
+    <!-- Profilés HEA/HEB -->
+    <div class="product-card" data-category="profiles">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#151719,#222428);display:flex;align-items:center;justify-content:center;">
+     <img src="profiles-hea-heb.jpg" class="product-img" alt="Profilés HEA/HEB">
+      </div>
+      <div class="product-info">
+        <div class="product-cat" data-fr="Profilés" data-en="Profiles">Profilés</div>
+        <div class="product-name" data-fr="Poutrelles HEA / HEB" data-en="HEA / HEB Beams">Poutrelles HEA / HEB</div>
+        <div class="product-desc" data-fr="Profilés en H pour structures métalliques lourdes. Haute résistance, grandes portées." data-en="H-profiles for heavy metal structures. High resistance, large spans.">Profilés en H pour structures métalliques lourdes. Haute résistance, grandes portées.</div>
+      </div>
+    </div>
+
+    <!-- Ronds à béton -->
+    <div class="product-card" data-category="profiles">
+      <img src="ronds-beton.jpg" class="product-img" alt="Ronds à Béton">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Armature" data-en="Reinforcement">Armature</div>
+        <div class="product-name" data-fr="Ronds à Béton (HA)" data-en="Rebar (HA)">Ronds à Béton (HA)</div>
+        <div class="product-desc" data-fr="Barres HA haute adhérence pour béton armé. Diamètres Ø8 à Ø40mm." data-en="High-adherence HA bars for reinforced concrete. Diameters Ø8 to Ø40mm.">Barres HA haute adhérence pour béton armé. Diamètres Ø8 à Ø40mm.</div>
+      </div>
+    </div>
+
+    <!-- Brides inox -->
+    <div class="product-card" data-category="raccords">
+      <img src="brides-inox.jpg" class="product-img" alt="Brides Inox">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Raccords & Brides" data-en="Fittings & Flanges">Raccords & Brides</div>
+        <div class="product-name" data-fr="Brides Inox ASTM" data-en="ASTM Stainless Flanges">Brides Inox ASTM</div>
+        <div class="product-desc" data-fr="Brides plate face, col-forgé, borgne. 304L et 316L. Pression PN16 à PN100." data-en="Flat face, weld-neck, blind flanges. 304L and 316L. PN16 to PN100 pressure.">Brides plate face, col-forgé, borgne. 304L et 316L. Pression PN16 à PN100.</div>
+      </div>
+      <div class="product-tag">INOX</div>
+    </div>
+
+    <!-- Cornières -->
+    <div class="product-card" data-category="profiles">
+     <img src="cornieres-acier.jpg" class="product-img" alt="Cornières Acier">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Profilés" data-en="Profiles">Profilés</div>
+        <div class="product-name" data-fr="Cornières Acier" data-en="Steel Angles">Cornières Acier</div>
+        <div class="product-desc" data-fr="Cornières égales et inégales, acier noir et galvanisé. De 20×20 à 200×200mm." data-en="Equal and unequal angles, black and galvanized steel. From 20×20 to 200×200mm.">Cornières égales et inégales, acier noir et galvanisé. De 20×20 à 200×200mm.</div>
+      </div>
+    </div>
+
+    <!-- Tubes UPN -->
+    <div class="product-card" data-category="profiles">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1c20,#242628);display:flex;align-items:center;justify-content:center;">
+       <img src="profiles-upn.jpg" class="product-img" alt="Profilés UPN">
+      </div>
+      <div class="product-info">
+        <div class="product-cat" data-fr="Profilés" data-en="Profiles">Profilés</div>
+        <div class="product-name" data-fr="Profilés UPN / UAP" data-en="UPN / UAP Profiles">Profilés UPN / UAP</div>
+        <div class="product-desc" data-fr="Profilés en U pour charpentes, rails, gaines. Acier S235 à S355. De UPN80 à UPN400." data-en="U-profiles for frames, rails, ducts. Steel S235 to S355. From UPN80 to UPN400.">Profilés en U pour charpentes, rails, gaines. Acier S235 à S355. De UPN80 à UPN400.</div>
+      </div>
+    </div>
+
+    <!-- Tôles lisses -->
+    <div class="product-card" data-category="toles">
+     <img src="toles-acier.jpg" class="product-img" alt="Tôles Acier Lisses">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Tôles" data-en="Sheets">Tôles</div>
+        <div class="product-name" data-fr="Tôles Acier Lisses" data-en="Plain Steel Sheets">Tôles Acier Lisses</div>
+        <div class="product-desc" data-fr="Tôles laminées à chaud et à froid. Épaisseur 1mm à 80mm. Formats standard et sur mesure." data-en="Hot and cold rolled sheets. Thickness 1mm to 80mm. Standard and custom sizes.">Tôles laminées à chaud et à froid. Épaisseur 1mm à 80mm. Formats standard et sur mesure.</div>
+      </div>
+    </div>
+  <!-- Tubes & Barres Bronze -->
+<div class="product-card" data-category="tubes">
+<div style="width:100%;height:100%;overflow:hidden;">
+<img src="bronze.jpg" class="product-img" alt="Tubes & Barres Bronze">
+</div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Métaux" data-en="Metals">Métaux</div>
+    <div class="product-name" data-fr="Tubes & Barres Bronze" data-en="Bronze Tubes & Bars">Tubes & Barres Bronze</div>
+    <div class="product-desc" data-fr="Tubes et barres en bronze. Haute résistance à la corrosion. Diamètres variés." data-en="Bronze tubes and bars. High corrosion resistance. Various diameters.">Tubes et barres en bronze. Haute résistance à la corrosion. Diamètres variés.</div>
+  </div>
+</div>
+<!-- Téflon / PTFE -->
+<div class="product-card" data-category="toles">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="teflon-ptfe.jpg" class="product-img" alt="Téflon / PTFE">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Plastiques" data-en="Plastics">Plastiques</div>
+    <div class="product-name" data-fr="Téflon / PTFE" data-en="Teflon / PTFE">Téflon / PTFE</div>
+    <div class="product-desc" data-fr="Barres et plaques en PTFE. Haute résistance chimique et thermique. Usinage sur mesure." data-en="PTFE bars and sheets. High chemical and thermal resistance. Custom machining.">Barres et plaques en PTFE. Haute résistance chimique et thermique. Usinage sur mesure.</div>
+  </div>
+</div>
+<!-- Réducteurs -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="reducteurs.jpg" class="product-img" alt="Réducteurs">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+    <div class="product-name" data-fr="Réducteurs" data-en="Reducers">Réducteurs</div>
+    <div class="product-desc" data-fr="Réducteurs concentriques et excentriques. Acier carbone et inox. Toutes dimensions." data-en="Concentric and eccentric reducers. Carbon and stainless steel. All sizes.">Réducteurs concentriques et excentriques. Acier carbone et inox. Toutes dimensions.</div>
+  </div>
+</div>
+<!-- Manomètres -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="manometres.jpg" class="product-img" alt="Manomètres">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Instrumentation" data-en="Instrumentation">Instrumentation</div>
+    <div class="product-name" data-fr="Manomètres" data-en="Pressure Gauges">Manomètres</div>
+    <div class="product-desc" data-fr="Manomètres toutes pressions et matières. Cadrans de 40 à 250mm. Connexions variées." data-en="Pressure gauges all pressures and materials. Dials from 40 to 250mm. Various connections.">Manomètres toutes pressions et matières. Cadrans de 40 à 250mm. Connexions variées.</div>
+  </div>
+</div>
+<!-- Raccords Pneumatiques -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="raccord-pneumatique.jpg" class="product-img" alt="Raccords Pneumatiques">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+    <div class="product-name" data-fr="Raccords Pneumatiques" data-en="Pneumatic Fittings">Raccords Pneumatiques</div>
+    <div class="product-desc" data-fr="Raccords push-in coudés, droits et en T. Corps plastique, filetage laiton. Toutes dimensions." data-en="Push-in elbow, straight and T fittings. Plastic body, brass thread. All sizes.">Raccords push-in coudés, droits et en T. Corps plastique, filetage laiton. Toutes dimensions.</div>
+  </div>
+</div>
+<!-- Filtre à Tamis -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="filtre-tamis.jpg" class="product-img" alt="Filtre à Tamis Bride">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+    <div class="product-name" data-fr="Filtres à Tamis Bride" data-en="Flanged Strainer Filters">Filtres à Tamis Bride</div>
+    <div class="product-desc" data-fr="Filtres inox montés entre brides. Tamis 316L, mailles fines. DN50 à DN300. PN16 à PN40." data-en="Stainless strainer filters between flanges. 316L mesh. DN50 to DN300. PN16 to PN40.">Filtres inox montés entre brides. Tamis 316L, mailles fines. DN50 à DN300. PN16 à PN40.</div>
+  </div>
+  <div class="product-tag">INOX</div>
+</div>
+<!-- Filtre en Y -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="filtre-y.jpg" class="product-img" alt="Filtre en Y Bride">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+    <div class="product-name" data-fr="Filtres en Y Bride" data-en="Y-Type Strainer Filters">Filtres en Y Bride</div>
+    <div class="product-desc" data-fr="Filtres en Y inox ASTM 150. Bride standard, nettoyage facile. DN25 à DN200. Acier et inox." data-en="Y-type stainless strainer ASTM 150. Standard flange, easy cleaning. DN25 to DN200. Steel and stainless.">Filtres en Y inox ASTM 150. Bride standard, nettoyage facile. DN25 à DN200. Acier et inox.</div>
+  </div>
+  <div class="product-tag">INOX</div>
+</div>
+<!-- Vanne de Régulation -->
+<div class="product-card" data-category="vannes">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="vanne-regulation.jpg" class="product-img" alt="Vanne de Régulation Pneumatique">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Vannes" data-en="Valves">Vannes</div>
+    <div class="product-name" data-fr="Vannes de Régulation" data-en="Control Valves">Vannes de Régulation</div>
+    <div class="product-desc" data-fr="Vannes de régulation pneumatiques à membrane. Corps fonte et acier. DN15 à DN300. PN16 à PN40." data-en="Pneumatic diaphragm control valves. Cast iron and steel body. DN15 to DN300. PN16 to PN40.">Vannes de régulation pneumatiques à membrane. Corps fonte et acier. DN15 à DN300. PN16 à PN40.</div>
+  </div>
+</div>
+<!-- Vanne de Pression -->
+<div class="product-card" data-category="vannes">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="vanne-pression.jpg" class="product-img" alt="Vanne de Réduction de Pression">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Vannes" data-en="Valves">Vannes</div>
+    <div class="product-name" data-fr="Vannes Réductrices de Pression" data-en="Pressure Reducing Valves">Vannes Réductrices de Pression</div>
+    <div class="product-desc" data-fr="Vannes bride avec manomètre intégré. Corps fonte rouge. Réseaux hydrauliques et incendie. DN50 à DN200." data-en="Flanged valves with integrated pressure gauge. Red cast iron body. Hydraulic and fire networks. DN50 to DN200.">Vannes bride avec manomètre intégré. Corps fonte rouge. Réseaux hydrauliques et incendie. DN50 à DN200.</div>
+  </div>
+</div>
+<!-- Collecteur Laiton -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="collecteur-laiton.jpg" class="product-img" alt="Collecteur de Distribution Laiton">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+    <div class="product-name" data-fr="Collecteurs Laiton" data-en="Brass Manifolds">Collecteurs Laiton</div>
+    <div class="product-desc" data-fr="Collecteurs double rangée en laiton. Coffret encastrable inclus. Chauffage, climatisation et plomberie. 2 à 12 départs." data-en="Double row brass manifolds. Recessed box included. Heating, air conditioning and plumbing. 2 to 12 outlets.">Collecteurs double rangée en laiton. Coffret encastrable inclus. Chauffage, climatisation et plomberie. 2 à 12 départs.</div>
+  </div>
+</div>
+<!-- Vanne de Contrôle Hydraulique -->
+<div class="product-card" data-category="vannes">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="vanne-controle.jpg" class="product-img" alt="Vanne de Contrôle Hydraulique">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Vannes" data-en="Valves">Vannes</div>
+    <div class="product-name" data-fr="Vannes de Contrôle Hydraulique" data-en="Hydraulic Control Valves">Vannes de Contrôle Hydraulique</div>
+    <div class="product-desc" data-fr="Vannes bride fonte rouge avec pilote laiton et soupape de sécurité. Réseaux eau et incendie. DN50 à DN300." data-en="Red cast iron flanged valves with brass pilot and safety valve. Water and fire networks. DN50 to DN300.">Vannes bride fonte rouge avec pilote laiton et soupape de sécurité. Réseaux eau et incendie. DN50 à DN300.</div>
+  </div>
+</div>
+<!-- Vis Trapézoïdale -->
+<div class="product-card" data-category="profiles">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="vis-trapezoidale.jpg" class="product-img" alt="Vis Trapézoïdale avec Écrou Bronze">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Transmission" data-en="Transmission">Transmission</div>
+    <div class="product-name" data-fr="Vis Trapézoïdales" data-en="Trapezoidal Screws">Vis Trapézoïdales</div>
+    <div class="product-desc" data-fr="Vis trapézoïdales acier avec écrou bronze. Transmission linéaire précise. Longueurs 100mm à 3000mm. Pas TR8 à TR50." data-en="Steel trapezoidal screws with bronze nut. Precise linear transmission. Lengths 100mm to 3000mm. Pitch TR8 to TR50.">Vis trapézoïdales acier avec écrou bronze. Transmission linéaire précise. Longueurs 100mm à 3000mm. Pas TR8 à TR50.</div>
+  </div>
+</div>
+<!-- Purgeur de Vapeur -->
+<div class="product-card" data-category="vannes">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="purgeur-vapeur.jpg" class="product-img" alt="Purgeur de Vapeur à Flotteur">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Vannes" data-en="Valves">Vannes</div>
+    <div class="product-name" data-fr="Purgeurs de Vapeur" data-en="Steam Traps">Purgeurs de Vapeur</div>
+    <div class="product-desc" data-fr="Purgeurs à flotteur inox CF8M. PN25, filetage femelle. Évacuation automatique des condensats. DN15 à DN50." data-en="Float steam traps stainless CF8M. PN25, female thread. Automatic condensate discharge. DN15 to DN50.">Purgeurs à flotteur inox CF8M. PN25, filetage femelle. Évacuation automatique des condensats. DN15 à DN50.</div>
+  </div>
+  <div class="product-tag">INOX</div>
+</div>
+<!-- Grillage Câblé -->
+<div class="product-card" data-category="grillages">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="grillage-cable.jpg" class="product-img" alt="Grillage Câblé">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Grillages" data-en="Mesh">Grillages</div>
+    <div class="product-name" data-fr="Grillage Câblé" data-en="Cable Mesh">Grillage Câblé</div>
+    <div class="product-desc" data-fr="Grillage en câble torsadé. Inox, acier galvanisé et bronze. Garde-corps, façades, clôtures. Mailles et dimensions sur mesure." data-en="Twisted cable mesh. Stainless, galvanized steel and bronze. Railings, facades, fences. Custom mesh and dimensions.">Grillage en câble torsadé. Inox, acier galvanisé et bronze. Garde-corps, façades, clôtures. Mailles et dimensions sur mesure.</div>
+  </div>
+</div>
+<!-- Panneaux de Chantier -->
+<div class="product-card" data-category="grillages">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="panneau-chantier.jpg" class="product-img" alt="Panneaux de Protection Chantier">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Tôles & Panneaux" data-en="Sheets & Panels">Tôles & Panneaux</div>
+    <div class="product-name" data-fr="Panneaux de Chantier Perforés" data-en="Perforated Safety Panels">Panneaux de Chantier Perforés</div>
+    <div class="product-desc" data-fr="Panneaux tôle perforée sur cadre métallique. Anti-chute pour échafaudages. Plusieurs couleurs disponibles. Sur mesure possible." data-en="Perforated sheet panels on metal frame. Anti-fall for scaffolding. Several colors available. Custom sizes possible.">Panneaux tôle perforée sur cadre métallique. Anti-chute pour échafaudages. Plusieurs couleurs disponibles. Sur mesure possible.</div>
+  </div>
+</div>
+<!-- Raccords Hydrauliques -->
+<div class="product-card" data-category="raccords">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="raccords-hydrauliques.jpg" class="product-img" alt="Raccords Hydrauliques">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+    <div class="product-name" data-fr="Raccords Hydrauliques" data-en="Hydraulic Fittings">Raccords Hydrauliques</div>
+    <div class="product-desc" data-fr="Coudes, tés, manchons et adaptateurs acier zingué. Haute pression. Filetages BSP, NPT et JIC. Toutes dimensions." data-en="Elbows, tees, couplings and adapters in zinc-plated steel. High pressure. BSP, NPT and JIC threads. All sizes.">Coudes, tés, manchons et adaptateurs acier zingué. Haute pression. Filetages BSP, NPT et JIC. Toutes dimensions.</div>
+  </div>
+</div>
+<!-- Câble Acier -->
+<div class="product-card" data-category="toles">
+  <div style="width:100%;height:100%;overflow:hidden;">
+    <img src="cable-acier.jpg" class="product-img" alt="Câble Acier Toronné">
+  </div>
+  <div class="product-info">
+    <div class="product-cat" data-fr="Câbles & Fils" data-en="Cables & Wires">Câbles & Fils</div>
+    <div class="product-name" data-fr="Câbles Acier Toronnés" data-en="Wire Ropes">Câbles Acier Toronnés</div>
+    <div class="product-desc" data-fr="Câbles acier galvanisé en bobine. Levage, gréage, structures et sécurité. Diamètres 3mm à 52mm. Torons 6×7 à 6×36." data-en="Galvanized steel wire ropes on reel. Lifting, rigging, structures and safety. Diameters 3mm to 52mm. Strands 6×7 to 6×36.">Câbles acier galvanisé en bobine. Levage, gréage, structures et sécurité. Diamètres 3mm à 52mm. Torons 6×7 à 6×36.</div>
+  </div>
+</div>
+    <!-- Raccords industriels -->
+    <div class="product-card" data-category="raccords">
+     <img src="raccords.jpg" class="product-img" alt="Raccords Industriels">
+      <div class="product-info">
+        <div class="product-cat" data-fr="Raccords" data-en="Fittings">Raccords</div>
+        <div class="product-name" data-fr="Raccords Industriels" data-en="Industrial Fittings">Raccords Industriels</div>
+        <div class="product-desc" data-fr="Tés, coudes, réductions, manchons. Acier noir, inox 316L. Soudage ou vissage." data-en="Tees, elbows, reducers, couplings. Black steel, stainless 316L. Welded or screwed.">Tés, coudes, réductions, manchons. Acier noir, inox 316L. Soudage ou vissage.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="reveal" style="text-align:center;margin:0 48px 0;padding:40px;background:var(--dark2);border:1px solid var(--steel);">
+  <div style="margin-bottom:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+  <h3 style="font-family:'Barlow Condensed';font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:12px;" data-fr="Vous ne trouvez pas ce que vous cherchez ?" data-en="Can't find what you're looking for?">Vous ne trouvez pas ce que vous cherchez ?</h3>
+  <p style="font-size:14px;color:var(--gray);margin-bottom:24px;" data-fr="Notre catalogue ne représente pas la totalité de nos possibilités. Contactez-nous avec votre besoin spécifique." data-en="Our catalog does not represent all our possibilities. Contact us with your specific need.">Notre catalogue ne représente pas la totalité de nos possibilités. Contactez-nous avec votre besoin spécifique.</p>
+  <a href="#contact" class="btn-primary" data-fr="Faire une demande spéciale →" data-en="Make a special request →">Faire une demande spéciale →</a>
+</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-line"></div>
+    <div style="position:absolute;top:0;left:0;width:75%;height:80%;background:linear-gradient(135deg,#1a1c20,#252830);display:flex;align-items:center;justify-content:center;">
+      <svg viewBox="0 0 300 250" style="width:260px;opacity:0.7">
+        <!-- Warehouse scene SVG -->
+        <rect x="0" y="0" width="300" height="250" fill="#1a1c20"/>
+        <rect x="20" y="80" width="260" height="4" fill="#3a3d44"/>
+        <rect x="20" y="130" width="260" height="4" fill="#3a3d44"/>
+        <rect x="20" y="180" width="260" height="4" fill="#3a3d44"/>
+        <!-- Tubes -->
+        <circle cx="60" cy="78" r="14" stroke="#5a5d64" stroke-width="2" fill="#252830"/>
+        <circle cx="60" cy="78" r="8" stroke="#4a4d54" stroke-width="1.5" fill="#1a1c20"/>
+        <circle cx="90" cy="78" r="14" stroke="#5a5d64" stroke-width="2" fill="#252830"/>
+        <circle cx="90" cy="78" r="8" stroke="#4a4d54" stroke-width="1.5" fill="#1a1c20"/>
+        <circle cx="120" cy="78" r="14" stroke="#5a5d64" stroke-width="2" fill="#252830"/>
+        <circle cx="150" cy="78" r="14" stroke="#5a5d64" stroke-width="2" fill="#252830"/>
+        <!-- Profiles row -->
+        <rect x="40" y="110" width="30" height="16" rx="1" fill="#3a3d44" stroke="#6a6d74" stroke-width="1"/>
+        <rect x="80" y="110" width="30" height="16" rx="1" fill="#3a3d44" stroke="#6a6d74" stroke-width="1"/>
+        <rect x="120" y="110" width="30" height="16" rx="1" fill="#3a3d44" stroke="#6a6d74" stroke-width="1"/>
+        <rect x="160" y="110" width="30" height="16" rx="1" fill="#3a3d44" stroke="#6a6d74" stroke-width="1"/>
+        <text x="150" y="230" text-anchor="middle" font-family="Barlow Condensed" font-size="12" fill="#e8611a" letter-spacing="3">INDUSTRIOSHOP</text>
+      </svg>
+    </div>
+    <div style="position:absolute;bottom:0;right:0;width:55%;height:55%;background:linear-gradient(135deg,#222428,#1a1c20);border:3px solid #0a0a0a;display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;padding:20px;">
+        <div style="font-family:'Bebas Neue';font-size:48px;color:#e8611a;line-height:1;">QUALITÉ</div>
+        <div style="font-family:'Barlow Condensed';font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a8d94;margin-top:4px;">GARANTIE</div>
+        <div style="width:40px;height:2px;background:#e8611a;margin:12px auto;"></div>
+        <div style="font-family:'Barlow';font-size:13px;color:#c4c6ca;line-height:1.5;">Produits de qualité<br>Large gamme<br>Disponible</div>
+      </div>
+    </div>
+    <div class="about-badge">
+      <div class="about-badge-num">N°1</div>
+      <div class="about-badge-text">VOTRE<br>FOURNISSEUR</div>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <div class="section-label" data-fr="À propos de nous" data-en="About us">À propos de nous</div>
+    <h2 class="section-title" data-fr="VOTRE PARTENAIRE<br>INDUSTRIEL" data-en="YOUR INDUSTRIAL<br>PARTNER">VOTRE PARTENAIRE<br>INDUSTRIEL</h2>
+    <p class="section-sub" data-fr="INDUSTRIOSHOP est votre fournisseur de référence pour tous les matériaux métalliques industriels. Nous proposons une gamme exhaustive de produits sélectionnés avec soin pour répondre à vos besoins." data-en="INDUSTRIOSHOP is your reference supplier for all industrial metal materials. We offer an extensive range of products compliant with carefully selected to meet your needs.">
+      INDUSTRIOSHOP est votre fournisseur de référence pour tous les matériaux métalliques industriels. Nous proposons une gamme exhaustive de produits sélectionnés avec soin pour répondre à vos besoins.
+    </p>
+    <div class="about-features">
+      <div class="feature-item">
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <div class="feature-title" data-fr="Stock permanent" data-en="Permanent stock">Stock permanent</div>
+        <div class="feature-text" data-fr="Disponibilité immédiate sur plus de 50 références produits." data-en="Immediate availability on over 50 product references.">Disponibilité immédiate sur plus de 50 références produits.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="feature-title" data-fr="Qualité professionnelle" data-en="Professional quality">Qualité professionnelle</div>
+        <div class="feature-text" data-fr="Produits sélectionnés avec soin pour une qualité optimale." data-en="Products carefully selected for optimal quality.">Produits sélectionnés avec soin pour une qualité optimale.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="feature-title" data-fr="Livraison mondiale" data-en="Worldwide delivery">Livraison mondiale</div>
+        <div class="feature-text" data-fr="Expédition rapide vers tous les pays, emballage sécurisé." data-en="Fast shipping to all countries, secure packaging.">Expédition rapide vers tous les pays, emballage sécurisé.</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="feature-title" data-fr="Support réactif" data-en="Responsive support">Support réactif</div>
+        <div class="feature-text" data-fr="Équipe disponible sous 24h pour vos demandes de devis." data-en="Team available within 24h for your quote requests.">Équipe disponible sous 24h pour vos demandes de devis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RACHAT -->
+<section id="rachat" style="background:var(--black);padding:100px 48px;">
+  <div class="reveal" style="text-align:center;margin-bottom:56px;">
+    <div class="section-label" style="justify-content:center;" data-fr="Vous avez des stocks ?" data-en="Do you have stocks?">Vous avez des stocks ?</div>
+    <h2 class="section-title" data-fr="NOUS ACHETONS VOS MATÉRIAUX" data-en="WE BUY YOUR MATERIALS">NOUS ACHETONS VOS MATÉRIAUX</h2>
+    <p class="section-sub" style="margin:0 auto;text-align:center;" data-fr="Vous avez des surplus, des stocks à liquider ou des matériaux industriels dont vous souhaitez vous séparer ? Nous les rachetons au meilleur prix." data-en="Do you have surplus, stocks to liquidate or industrial materials you want to get rid of? We buy them at the best price.">Vous avez des surplus, des stocks à liquider ou des matériaux industriels dont vous souhaitez vous séparer ? Nous les rachetons au meilleur prix.</p>
+  </div>
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2px;">
+    <div style="background:var(--dark2);padding:36px 28px;border-top:3px solid var(--orange);transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div style="font-family:'Barlow Condensed';font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;" data-fr="Surplus & Invendus" data-en="Surplus & Unsold">Surplus & Invendus</div>
+      <div style="font-size:13px;color:var(--gray);line-height:1.6;" data-fr="Stocks excédentaires, commandes annulées, invendus de chantier." data-en="Excess stocks, cancelled orders, unsold site materials.">Stocks excédentaires, commandes annulées, invendus de chantier.</div>
+    </div>
+    <div style="background:var(--dark2);padding:36px 28px;border-top:3px solid var(--orange);transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+      <div style="font-family:'Barlow Condensed';font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;" data-fr="Matériaux de Chantier" data-en="Construction Materials">Matériaux de Chantier</div>
+      <div style="font-size:13px;color:var(--gray);line-height:1.6;" data-fr="Restes de chantier, coupes, chutes de production en bon état." data-en="Site leftovers, cuts, production offcuts in good condition.">Restes de chantier, coupes, chutes de production en bon état.</div>
+    </div>
+    <div style="background:var(--dark2);padding:36px 28px;border-top:3px solid var(--orange);transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+      <div style="font-family:'Barlow Condensed';font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;" data-fr="Équipements Industriels" data-en="Industrial Equipment">Équipements Industriels</div>
+      <div style="font-size:13px;color:var(--gray);line-height:1.6;" data-fr="Tuyauterie, vannes, raccords, profilés, tôles usagées en bon état." data-en="Piping, valves, fittings, profiles, used sheets in good condition.">Tuyauterie, vannes, raccords, profilés, tôles usagées en bon état.</div>
+    </div>
+    <div style="background:var(--dark2);padding:36px 28px;border-top:3px solid var(--orange);transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <div style="font-family:'Barlow Condensed';font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:8px;" data-fr="Meilleur Prix Garanti" data-en="Best Price Guaranteed">Meilleur Prix Garanti</div>
+      <div style="font-size:13px;color:var(--gray);line-height:1.6;" data-fr="Évaluation rapide et paiement immédiat. Contactez-nous pour une offre." data-en="Quick evaluation and immediate payment. Contact us for an offer.">Évaluation rapide et paiement immédiat. Contactez-nous pour une offre.</div>
+    </div>
+  </div>
+  <div class="reveal" style="text-align:center;margin-top:48px;">
+    <a href="#contact" class="btn-primary" data-fr="Proposer mes matériaux →" data-en="Offer my materials →">Proposer mes matériaux →</a>
+  </div>
+</section>
+<!-- WHY US -->
+<section id="pourquoi">
+  <div style="text-align:center;margin-bottom:0;" class="reveal">
+    <div class="section-label" style="justify-content:center;" data-fr="Nos engagements" data-en="Our commitments">Nos engagements</div>
+    <h2 class="section-title" data-fr="POURQUOI NOUS CHOISIR" data-en="WHY CHOOSE US">POURQUOI NOUS CHOISIR</h2>
+  </div>
+  <div class="why-grid reveal">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+      <div class="why-title" data-fr="Large gamme" data-en="Wide range">Large gamme</div>
+      <div class="why-text" data-fr="Tubes, profilés, tôles, barres, raccords, brides, vannes et plus encore. Tout ce dont votre projet a besoin, en un seul endroit." data-en="Pipes, profiles, sheets, bars, fittings, flanges, valves and more. Everything your project needs, in one place.">Tubes, profilés, tôles, barres, raccords, brides, vannes et plus encore. Tout ce dont votre projet a besoin, en un seul endroit.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+      <div class="why-title" data-fr="Qualité sélectionnée" data-en="International standards">Qualité sélectionnée</div>
+      <div class="why-text" data-fr="Chaque produit est soigneusement sélectionné pour garantir qualité et durabilité à nos clients." data-en="Every product is carefully selected to guarantee quality and durability for our customers.">Chaque produit est soigneusement sélectionné pour garantir qualité et durabilité à nos clients.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+      <div class="why-title" data-fr="Réactivité & rapidité" data-en="Responsiveness & speed">Réactivité & rapidité</div>
+      <div class="why-text" data-fr="Devis sous 24h, traitement des commandes prioritaire, expédition rapide vers toutes destinations." data-en="Quote within 24h, priority order processing, fast shipping to all destinations.">Devis sous 24h, traitement des commandes prioritaire, expédition rapide vers toutes destinations.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <div class="why-title" data-fr="Prix compétitifs" data-en="Competitive prices">Prix compétitifs</div>
+      <div class="why-text" data-fr="Des tarifs adaptés à toutes les tailles de projets, avec des remises pour les commandes en volume et partenariats récurrents." data-en="Prices adapted to all project sizes, with discounts for volume orders and recurring partnerships.">Des tarifs adaptés à toutes les tailles de projets, avec des remises pour les commandes en volume et partenariats récurrents.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">05</div>
+      <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="why-title" data-fr="Sécurité & confidentialité" data-en="Security & confidentiality">Sécurité & confidentialité</div>
+      <div class="why-text" data-fr="Vos informations personnelles sont traitées avec la plus grande discrétion. Confidentialité totale garantie." data-en="Your personal information is handled with the utmost discretion. Total confidentiality guaranteed.">Vos informations personnelles sont traitées avec la plus grande discrétion. Confidentialité totale garantie.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-num">06</div>
+      <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="why-title" data-fr="Service personnalisé" data-en="Personalized service">Service personnalisé</div>
+      <div class="why-text" data-fr="Une équipe disponible pour tous nos clients. Nous comprenons vos besoins techniques et vous proposons les meilleures solutions." data-en="A team available for all our clients. We understand your technical needs and propose the best solutions.">Une équipe disponible pour tous nos clients. Nous comprenons vos besoins techniques et vous proposons les meilleures solutions.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info reveal">
+    <div class="section-label" data-fr="Nous contacter" data-en="Contact us">Nous contacter</div>
+    <h2 class="section-title" data-fr="PARLONS DE<br>VOTRE PROJET" data-en="LET'S TALK<br>YOUR PROJECT">PARLONS DE<br>VOTRE PROJET</h2>
+    <p class="section-sub" data-fr="Un besoin en matériaux industriels ? Notre équipe vous répond sous 24h avec un devis détaillé et personnalisé." data-en="Need industrial materials? Our team will respond within 24h with a detailed and personalized quote.">
+      Un besoin en matériaux industriels ? Notre équipe vous répond sous 24h avec un devis détaillé et personnalisé.
+    </p>
+    <div class="contact-items"><div style="position:relative;display:inline-block;width:100%;">
+  <div id="wa-contact-menu" style="display:none;position:absolute;bottom:70px;left:0;right:0;flex-direction:column;gap:8px;z-index:999;">
+    <a href="https://wa.me/2250105498968?text=Bonjour%2C%20je%20souhaite%20acheter%20un%20produit." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.3);">🛒 Acheter un produit</a>
+    <a href="https://wa.me/2250105498968?text=Bonjour%2C%20j%27ai%20une%20demande%20sp%C3%A9ciale." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.3);">⚙️ Demande spéciale</a>
+    <a href="https://wa.me/2250105498968?text=Bonjour%2C%20je%20souhaite%20vendre%20mes%20mat%C3%A9riaux." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.3);">💰 Vendre mes matériaux</a>
+    <a href="https://wa.me/2250105498968?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.3);">📋 Demander un devis</a>
+  </div>
+  <button onclick="toggleWAContact()" style="width:100%;background:#25D366;color:white;border:none;padding:16px;border-radius:12px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;border-left:3px solid #128C7E;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> <span data-fr="Contacter sur WhatsApp" data-en="Contact on WhatsApp">Contacter sur WhatsApp</span>
+  </button>
+</div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div>
+          <div class="contact-item-label" data-fr="Email" data-en="Email">Email</div>
+          <div class="contact-item-value">industrioshop.contact@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 1.08 5.18 2 2 0 0 1 3.05 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/></svg></div>
+        <div>
+          <div class="contact-item-label" data-fr="WhatsApp / Tel" data-en="WhatsApp / Phone">WhatsApp / Tel</div>
+          <div class="contact-item-value">+225 01 05 49 89 68</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div>
+          <div class="contact-item-label" data-fr="Horaires" data-en="Hours">Horaires</div>
+          <div class="contact-item-value" data-fr="Disponible 24h/24 – 7j/7" data-en="Available 24/7">Disponible 24h/24 – 7j/7</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e8611a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div>
+          <div class="contact-item-label" data-fr="Service" data-en="Service">Service</div>
+          <div class="contact-item-value" data-fr="International — Livraison mondiale" data-en="International — Worldwide delivery">International — Livraison mondiale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form reveal">
+    <h3 class="form-title" data-fr="Demande de devis" data-en="Request a quote">Demande de devis</h3>
+    <form action="https://formspree.io/f/xdavazbr" method="POST" autocomplete="off" onsubmit="return handleSubmit(event)" data-redirect="false">
+      <div class="form-row"><input type="hidden" name="_subject" value="Nouvelle demande de devis - IndustrioShop">
+<input type="hidden" name="_next" value="https://industrioshop.com#contact">
+<input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+        <div class="form-group">
+          <label data-fr="Nom complet *" data-en="Full name *">Nom complet *</label>
+          <input type="text" required name="nom" placeholder="Jean Dupont" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label data-fr="Entreprise" data-en="Company">Entreprise</label>
+          <input type="text" name="entreprise" placeholder="Votre société" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-fr="Email *" data-en="Email *">Email *</label>
+          <input type="email" name="email" required placeholder="email@exemple.com" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label data-fr="Téléphone" data-en="Phone">Téléphone</label>
+          <input type="tel" name="telephone" placeholder="+XXX XXX XXX" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-fr="Produit souhaité *" data-en="Desired product *">Produit souhaité *</label>
+        <select name="produit" required>
+          <option value="" data-fr="-- Sélectionnez un produit --" data-en="-- Select a product --">-- Sélectionnez un produit --</option>
+          <option data-fr="Tubes acier" data-en="Steel pipes">Tubes acier</option>
+          <option data-fr="Profilés (HEA/HEB/UPN)" data-en="Profiles (HEA/HEB/UPN)">Profilés (HEA/HEB/UPN)</option>
+          <option data-fr="Tôles (lisses/perforées)" data-en="Sheets (plain/perforated)">Tôles (lisses/perforées)</option>
+          <option data-fr="Brides & raccords inox" data-en="Stainless flanges & fittings">Brides & raccords inox</option>
+          <option data-fr="Ronds à béton" data-en="Rebar">Ronds à béton</option>
+          <option data-fr="Cornières acier" data-en="Steel angles">Cornières acier</option><option data-fr="Tubes & Barres Bronze" data-en="Bronze Tubes & Bars">Tubes & Barres Bronze</option>
+<option data-fr="Téflon / PTFE" data-en="Teflon / PTFE">Téflon / PTFE</option>
+<option data-fr="Manomètres" data-en="Pressure Gauges">Manomètres</option>
+<option data-fr="Réducteurs" data-en="Reducers">Réducteurs</option>
+          <option data-fr="Raccords Pneumatiques" data-en="Pneumatic Fittings">Raccords Pneumatiques</option>
+<option data-fr="Filtres à Tamis Bride" data-en="Flanged Strainer Filters">Filtres à Tamis Bride</option>
+<option data-fr="Filtres en Y Bride" data-en="Y-Type Strainer Filters">Filtres en Y Bride</option>
+<option data-fr="Vannes de Régulation" data-en="Control Valves">Vannes de Régulation</option>
+<option data-fr="Vannes Réductrices de Pression" data-en="Pressure Reducing Valves">Vannes Réductrices de Pression</option>
+<option data-fr="Vannes de Contrôle Hydraulique" data-en="Hydraulic Control Valves">Vannes de Contrôle Hydraulique</option>
+<option data-fr="Raccords Hydrauliques" data-en="Hydraulic Fittings">Raccords Hydrauliques</option>
+<option data-fr="Vis Trapézoïdales" data-en="Trapezoidal Screws">Vis Trapézoïdales</option>
+<option data-fr="Purgeurs de Vapeur" data-en="Steam Traps">Purgeurs de Vapeur</option>
+<option data-fr="Grillage Câblé" data-en="Cable Mesh">Grillage Câblé</option>
+<option data-fr="Panneaux de Chantier Perforés" data-en="Perforated Safety Panels">Panneaux de Chantier Perforés</option>
+<option data-fr="Autre / Combinaison" data-en="Other / Combination">Autre / Combinaison</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label data-fr="Détails de votre demande *" data-en="Request details *">Détails de votre demande *</label>
+        <textarea name="message" required placeholder="Précisez la quantité, les dimensions, les normes souhaitées..." style="min-height:120px;"></textarea>
+      </div>
+      <div class="form-group" style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;">
+  <input type="checkbox" id="rgpd" name="rgpd" required style="width:18px;height:18px;margin-top:2px;accent-color:var(--orange);flex-shrink:0;cursor:pointer;">
+  <label for="rgpd" style="font-size:12px;color:var(--gray);line-height:1.6;cursor:pointer;" data-fr="J'accepte que mes données personnelles soient traitées conformément à la <a href='politique-confidentialite.html' style='color:var(--orange);'>politique de confidentialité</a> d'INDUSTRIOSHOP." data-en="I agree that my personal data will be processed in accordance with INDUSTRIOSHOP's <a href='politique-confidentialite.html' style='color:var(--orange);'>privacy policy</a>.">
+    J'accepte que mes données personnelles soient traitées conformément à la <a href="politique-confidentialite.html" style="color:var(--orange);">politique de confidentialité</a> d'INDUSTRIOSHOP.
+  </label>
+</div>
+<button type="submit" class="form-submit" data-fr="Envoyer ma demande →" data-en="Send my request →">Envoyer ma demande →</button>
+      <p class="form-notice" data-fr="Vos données sont protégées et ne seront jamais partagées. Réponse garantie sous 24h." data-en="Your data is protected and will never be shared. Response guaranteed within 24h.">
+        Vos données sont protégées et ne seront jamais partagées. Réponse garantie sous 24h.
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="nav-logo-text">INDUSTRIO<span style="color:var(--orange)">SHOP</span></span>
+      <p data-fr="Votre fournisseur de confiance pour tous les matériaux métalliques industriels. Qualité professionnelle, livraison mondiale, service professionnel." data-en="Your trusted supplier for all industrial metal materials. Professional quality, worldwide delivery, professional service.">
+        Votre fournisseur de confiance pour tous les matériaux métalliques industriels. Qualité professionnelle, livraison mondiale, service professionnel.
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-fr="Produits" data-en="Products">Produits</div>
+      <ul class="footer-links">
+        <li><a href="#produits" data-fr="Tubes & Tuyaux" data-en="Pipes & Tubes">Tubes & Tuyaux</a></li>
+        <li><a href="#produits" data-fr="Profilés acier" data-en="Steel profiles">Profilés acier</a></li>
+        <li><a href="#produits" data-fr="Tôles & Plaques" data-en="Sheets & Plates">Tôles & Plaques</a></li>
+        <li><a href="#produits" data-fr="Raccords & Brides" data-en="Fittings & Flanges">Raccords & Brides</a></li>
+        <li><a href="#produits" data-fr="Ronds à béton" data-en="Rebar">Ronds à béton</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-fr="Entreprise" data-en="Company">Entreprise</div>
+      <ul class="footer-links">
+        <li><a href="#about" data-fr="À propos" data-en="About us">À propos</a></li>
+        <li><a href="#pourquoi" data-fr="Nos engagements" data-en="Our commitments">Nos engagements</a></li>
+        <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+<li><a href="#rachat" data-fr="Vendre" data-en="Sell">Vendre</a></li>
+        <li><a href="#contact" data-fr="Demander un devis" data-en="Request a quote">Demander un devis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      © 2026 <strong>INDUSTRIOSHOP</strong> — <span data-fr="Tous droits réservés" data-en="All rights reserved">Tous droits réservés</span>
+    </div>
+   <div class="footer-legal">
+      <a href="politique-confidentialite.html" data-fr="Politique de confidentialité" data-en="Privacy policy">Politique de confidentialité</a>
+      <a href="mentions-legales.html" data-fr="Mentions légales" data-en="Legal notice">Mentions légales</a>
+      <a href="conditions-generales.html" data-fr="Conditions générales" data-en="Terms & conditions">Conditions générales</a>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button><div id="wa-menu" style="display:none;position:fixed;bottom:160px;right:20px;z-index:9999;flex-direction:column;gap:8px;">
+  <a href="https://wa.me/2250105498968?text=Bonjour%2C%20je%20souhaite%20acheter%20un%20produit." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3);">🛒 Acheter un produit</a>
+  <a href="https://wa.me/2250105498968?text=Bonjour%2C%20j%27ai%20une%20demande%20sp%C3%A9ciale." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3);">⚙️ Demande spéciale</a>
+  <a href="https://wa.me/2250105498968?text=Bonjour%2C%20je%20souhaite%20vendre%20mes%20mat%C3%A9riaux." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3);">💰 Vendre mes matériaux</a>
+  <a href="https://wa.me/2250105498968?text=Bonjour%2C%20je%20souhaite%20demander%20un%20devis." target="_blank" style="background:#25D366;color:white;padding:10px 16px;border-radius:25px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3);">📋 Demander un devis</a>
+</div>
+<button onclick="toggleWAMenu()" style="position:fixed;bottom:90px;right:20px;z-index:9999;background:#25D366;border:none;border-radius:50%;width:60px;height:60px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+<circle cx="20" cy="4" r="5" fill="#1FAF38"/>
+<line x1="20" y1="1.5" x2="20" y2="6.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<line x1="17.5" y1="4" x2="22.5" y2="4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+</button>
+<script>
+// ─── NAVBAR SCROLL ───
+
+function toggleWAContact(){const m=document.getElementById('wa-contact-menu');m.style.display=m.style.display==='flex'?'none':'flex';}
+function toggleWAMenu(){const m=document.getElementById('wa-menu');m.style.display=m.style.display==='flex'?'none':'flex';}
+document.addEventListener('click',function(e){const mw=document.getElementById('wa-menu');const mc=document.getElementById('wa-contact-menu');if(!e.target.closest('button')&&!e.target.closest('a')){if(mw.style.display==='flex')mw.style.display='none';if(mc&&mc.style.display==='flex')mc.style.display='none';}});
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+// ─── MOBILE MENU ───
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ─── REVEAL ANIMATIONS ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ─── PRODUCT CARDS REVEAL ───
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }, i * 60);
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.product-card').forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(20px)';
+  card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  cardObserver.observe(card);
+});
+
+// ─── PRODUCT FILTER ───
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    const show = cat === 'all' || card.dataset.category === cat;
+    card.style.display = show ? 'block' : 'none';
+  });
+}
+
+// ─── LANGUAGE TOGGLE ───
+const browserLang = navigator.language || navigator.userLanguage;
+let currentLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+document.addEventListener('DOMContentLoaded', () => {
+  if (currentLang === 'en') setLang('en');
+});
+
+function setLang(lang) {
+  currentLang = lang;
+document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+
+  document.querySelectorAll('[data-fr]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = text;
+      } else if (el.tagName === 'OPTION') {
+        el.textContent = text;
+      } else {
+        el.innerHTML = text;
+      }
+    }
+  });
+
+  // Update hero title
+  if (lang === 'en') {
+    document.querySelector('.hero-title').innerHTML = `
+      <div>STEEL</div>
+      <div class="line2">AT THE SERVICE</div>
+      <div>OF <span class="accent">INDUSTRY</span></div>
+    `;
+  } else {
+    document.querySelector('.hero-title').innerHTML = `
+      <div>L'ACIER</div>
+      <div class="line2">AU SERVICE</div>
+      <div>DE <span class="accent">L'INDUSTRIE</span></div>
+    `;
+  }
+}
+
+// ─── FORM SUBMIT ───
+function sanitize(str){return str?str.replace(/[<>"'`\\\/\x00-\x1f]/g,'').trim().substring(0,500):''}
+function validateEmail(email){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);}
+function handleSubmit(e) {
+  const fields=e.target.querySelectorAll('input,textarea,select');
+  let valid=true;
+  fields.forEach(f=>{
+    if(f.type==='hidden') return;
+    if(f.type==='email'){
+      f.value=f.value.trim().substring(0,200);
+      if(!validateEmail(f.value)){alert('Email invalide.');valid=false;}
+    } else {
+      f.value=sanitize(f.value);
+    }
+  });
+  if(!valid) return false;
+  return true;
+}
+
+// ─── SMOOTH CLOSE MOBILE MENU ON OUTSIDE CLICK ───
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
